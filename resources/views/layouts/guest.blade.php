@@ -107,12 +107,12 @@
                         <ul class="account-menu responsive-account-menu ml-3">
                             <li class="icon"><a href="login.php"><i class="las la-user"></i></a></li>
                         </ul>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="menu-toggle"></span>
                         </button>
-                        <div class=" navbar-collapse" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav main-menu ml-auto">
                                 <li> <a href="/">Home</a></li>
                                 <li><a href="/plan">Plan</a></li>
