@@ -102,10 +102,15 @@
                     </coingecko-coin-price-marquee-widget>
 
                     <nav class="navbar navbar-expand-xl p-0 align-items-center">
-                        <a class="site-logo site-title" href="index.php"><img src="assets/images/logoIcon/logo.png"
-                                alt="site-logo"></a>
+                        <a class="site-logo site-title" href="/">
+                            {{-- <img src="assets/images/logoIcon/logo.png" alt="site-logo"> --}}
+                        </a>
                         <ul class="account-menu responsive-account-menu ml-3">
-                            <li class="icon"><a href="login.php"><i class="las la-user"></i></a></li>
+                            <li class="icon">
+                                <a href="/login">
+                                    <i class="las la-user"></i>
+                                </a>
+                            </li>
                         </ul>
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -151,7 +156,9 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-12 text-center">
-                            <a href="/"><img src="assets/images/logoIcon/logo.png" alt="image"></a>
+                            <a href="/">
+                                {{-- <img src="assets/images/logoIcon/logo.png" alt="image"> --}}
+                            </a>
                             <ul class="footer-short-menu d-flex flex-wrap justify-content-center mt-3">
                                 <li><a href="#">Privacy &amp;
                                         Policy</a></li>
