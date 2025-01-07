@@ -65,7 +65,30 @@
     {{--
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" /> --}}
 
+    <style>
+        .mgm {
+            border-radius: 7px;
+            position: fixed;
+            z-index: 90;
+            bottom: 45%;
+            right: 50px;
+            background: #fff;
+            padding: 10px 27px;
+            box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, .3);
+        }
 
+        .mgm a {
+            font-weight: 700;
+            display: block;
+            color: #8BC34A;
+        }
+
+        .mgm a,
+        .mgm a:active {
+            transition: all .2s ease;
+            color: #8BC34A;
+        }
+    </style>
 </head>
 
 <body>
@@ -192,6 +215,9 @@
             </div>
         </footer>
         <!-- footer section end -->
+    </div>
+    <div class="mgm" style="display: none;">
+        <div class="txt" style="color:black;"></div>
     </div>
 
     <!-- jQuery library -->
@@ -338,6 +364,28 @@
 
         })(jQuery);
     </script> --}}
+    <script type="text/javascript" defer>
+        var listCountries = ['South Africa', 'USA', 'Germany', 'France', 'Italy', 'South Africa', 'Australia', 'South Africa', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'South Africa', 'South Africa', 'Venezuela', 'South Africa', 'Sweden', 'South Africa', 'South Africa', 'Italy', 'South Africa', 'United Kingdom', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus'];
+        var listPlans = ['$15,467.66', '$10,220.12', '$51,120.05', '$40,100.33', '$12,400.15', '$7,000.23', '$9,014.33', '$26,450.23', '$79,300.45', '$29,500.23'];
+        var transarray = ['just <b>invested</b>', 'has <b>withdrawn</b>', 'is <b>trading with</b>'];
+        interval = Math.floor(Math.random() * (40000 - 34000 + 1) + 8000);
+        var run = setInterval(request, interval);
+
+        function request() {
+            clearInterval(run);
+            interval = Math.floor(Math.random() * (40000 - 34000 + 1) + 8000);
+            var country = listCountries[Math.floor(Math.random() * listCountries.length)];
+            var transtype = transarray[Math.floor(Math.random() * transarray.length)];
+            var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+            var msg = 'Someone from <b>' + country + '</b> ' + transtype + ' <a href="javascript:void(0);" onclick="javascript:void(0);">' + plan + '</a>';
+            $(".mgm .txt").html(msg);
+            $(".mgm").stop(true).fadeIn(300);
+            window.setTimeout(function() {
+                $(".mgm").stop(true).fadeOut(300);
+            }, 10000);
+            run = setInterval(request, interval);
+        }
+    </script>
 
     @livewireScripts
 </body>
